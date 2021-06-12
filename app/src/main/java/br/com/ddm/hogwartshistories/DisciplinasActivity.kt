@@ -1,5 +1,6 @@
 package br.com.ddm.hogwartshistories
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.TokenWatcher
@@ -30,7 +31,9 @@ class DisciplinasActivity : AppCompatActivity() {
     }
 
     fun onClickDisciplina (disciplina: Disciplina) {
-        Toast.makeText(this, "Clicou", Toast.LENGTH_SHORT).show()
+        val intent = Intent(this, DetalheDisciplinaActivity::class.java)
+        intent.putExtra("disciplina", disciplina)
+        startActivity(intent)
     }
 
 

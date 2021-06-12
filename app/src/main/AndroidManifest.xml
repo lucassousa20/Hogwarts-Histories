@@ -11,9 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HogwartsHistories">
-        <activity android:name=".DisciplinasActivity"></activity>
+        <activity android:name=".DetalheDisciplinaActivity"></activity>
+        <activity android:name=".DisciplinasActivity" />
         <activity android:name=".ProfessoresActivity" />
-        <activity android:name=".DetalheDisciplinaActivity" />
         <activity android:name=".CasasActivity" />
         <activity android:name=".ConfiguracoesActivity" />
         <activity
