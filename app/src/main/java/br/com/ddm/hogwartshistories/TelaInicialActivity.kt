@@ -87,13 +87,13 @@ class TelaInicialActivity : AppCompatActivity(), NavigationView.OnNavigationItem
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        val intentProfessores =  Intent(this, ProfessoresActivity::class.java)
-        val intentDisciplinas =  Intent(this, DisciplinasActivity::class.java)
         when (item.itemId) {
             R.id.nav_displiciplinas -> {
+                val intentDisciplinas =  Intent(this, DisciplinasActivity::class.java)
                 startActivity(intentDisciplinas)
             }
             R.id.nav_professores -> {
+                val intentProfessores =  Intent(this, ProfessoresActivity::class.java)
                 startActivity(intentProfessores)
             }
             R.id.nav_localizacao -> {
