@@ -5,7 +5,7 @@
     android:id="@+id/layout_menu_lateral"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TelaInicialActivity"
+    tools:context=".ProfessoresActivity"
     android:orientation="vertical">
 
     <LinearLayout
@@ -14,7 +14,11 @@
         android:orientation="vertical">
         <include layout="@layout/toolbar"/>
 
-
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical"
+            android:id="@+id/recycler_disciplinas"/>
     </LinearLayout>
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_menu_lateral"

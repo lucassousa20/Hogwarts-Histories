@@ -6,14 +6,13 @@ object DisciplinaService {
 
         var disciplinas = mutableListOf<Disciplina>()
 
-        for (i in 1..10) {
             val d = Disciplina()
-            d.nome = "Disciplina $i"
-            d.ementa = "Ementa $i"
-            d.professor = "Professor $i"
-            d.foto = "Foto $i"
+            d.nome = "Defesa Contra Arte das Trevas"
+            d.ementa = "Quirrel"
+            d.professor = "Quirrell"
+            d.foto = "https://static.wikia.nocookie.net/harrypotter/images/d/d2/Quirinus_Quirrell_PS_promo.jpg/revision/latest/scale-to-width-down/458?cb=20110806132643"
             disciplinas.add(d)
-        }
+
         return disciplinas
     }
 }

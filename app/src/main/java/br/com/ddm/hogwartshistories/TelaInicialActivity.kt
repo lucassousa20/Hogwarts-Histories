@@ -14,9 +14,13 @@ import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
 import androidx.core.view.isVisible
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.*
+import kotlinx.android.synthetic.main.activity_professores.*
 import kotlinx.android.synthetic.main.activity_tela_inicial.*
+import kotlinx.android.synthetic.main.activity_tela_inicial.layout_menu_lateral
+import kotlinx.android.synthetic.main.activity_tela_inicial.nav_menu_lateral
 import kotlinx.android.synthetic.main.toolbar.*
 
 class TelaInicialActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -64,6 +68,7 @@ class TelaInicialActivity : AppCompatActivity(), NavigationView.OnNavigationItem
 //        }
 
         configuraMenuLateral()
+
     }
 
     private fun configuraMenuLateral () {
@@ -82,12 +87,14 @@ class TelaInicialActivity : AppCompatActivity(), NavigationView.OnNavigationItem
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
+        val intentProfessores =  Intent(this, ProfessoresActivity::class.java)
+        val intentDisciplinas =  Intent(this, DisciplinasActivity::class.java)
         when (item.itemId) {
             R.id.nav_displiciplinas -> {
-                Toast.makeText(this, "Clicou Disciplicnas", Toast.LENGTH_SHORT).show()
+                startActivity(intentDisciplinas)
             }
-            R.id.nav_forum -> {
-                Toast.makeText(this, "Clicou Forum", Toast.LENGTH_SHORT).show()
+            R.id.nav_professores -> {
+                startActivity(intentProfessores)
             }
             R.id.nav_localizacao -> {
                 Toast.makeText(this, "Clicou Disciplicnas", Toast.LENGTH_SHORT).show()
