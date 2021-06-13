@@ -3,6 +3,7 @@ package br.com.ddm.hogwartshistories
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import kotlinx.android.synthetic.main.activity_detalhe_disciplina.*
 
 class DetalheDisciplinaActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -10,7 +11,8 @@ class DetalheDisciplinaActivity : AppCompatActivity() {
         setContentView(R.layout.activity_detalhe_disciplina)
 
         val disciplina =  intent.extras?.getSerializable("disciplina") as Disciplina
+        supportActionBar?.title = "${disciplina.nome}"
+        var nome = disciplina.nome
 
-        Toast.makeText(this, "${disciplina.nome}", Toast.LENGTH_SHORT).show()
     }
 }
